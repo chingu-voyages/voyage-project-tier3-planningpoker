@@ -1,4 +1,4 @@
-# voyage-project-tier3-dinosaurs
+# voyage-project-tier3-planning-poker
 
 ## Table of Contents
 
@@ -10,43 +10,21 @@
 
 ## Overview
 
-Hey there! How about we create an app all about dinosaurs? We've got our data all 
-set from the National History Museum that tells us about different dinosaurs.
+Hey Chingus, it's poker time!
 
-Imagine our app like a dino world! We can show all kinds of dinosaurs – big ones 
-looking for food, calm ones eating plants, and even tiny ones running around. From 
-huge dinosaurs that made the ground shake to little ones in the forests.
+In this voyage, we'll be developing a Scrum Poker app, the go-to agile estimation technique for development teams. 
 
-And get this, our tool might even let us time-travel! Imagine going back in time to 
-see how these dinosaurs lived. Plus, it tells us what type of dinosaur it is and 
-where it used to call home. So, you'll get to know dinosaurs from all over the place.
+JJust like playing poker with friends, but with a twist – it's all about your tasks! Through this app, you'll not only enjoy the process but also become proficient in the Scrum methodology, gaining valuable insights into your skills and those of your teammates.
 
-We're thinking of adding a cool twist – using News data to show you the latest 
-discoveries about dinosaurs. Pretty cool, huh?
+But wait, there's more excitement to come! For the first time in Chingu, we're integrating the OpenAI API. This means we'll have a virtual teammate joining us in the estimation process, offering valuable insights for each task.
 
-Let's make an app that's not just smart but also super fun for everyone!
+The app will facilitate sessions where all teammates can join in to participate. Get ready for a productive and enjoyable journey ahead!
 
-- Dinosaur example website
+Let's deal the cards and get started!
 
-![Dinosaurs Example Website](./assets/dino-site-inspiration.png)
+- Planning poker example app
 
-- Dinosaurs example map
-
-![Dinosaurs Example Map](./assets/dino-map-site.png)
-
-- Dinosaurs example charts
-
-![Dinosaurs Example Chart](./assets/dino-charts-zig.png)
-
-![Dinosaurs Example BarChart](./assets/dino-chart-bar.png)
-
-Your Chingu Voyage team will be using this data to create an web app that will help 
-anyone interested to be able to “dig” into the fossil data and discover facts 
-about dinosaurs in a unique way. Your app will summarize this data and will allow
-users to apply a single filter to multiple visualizations simultaneously.
-
-This will provide you with an opportunity to build Web Development experience
-dealing with large volumes of dinosaurs & news data, charts, maps, and user queries.
+![Planning Poker Example Website](./assets/firepoker.png)
 
 ## General Instructions
 
@@ -77,13 +55,12 @@ implement to enhance this app, if time permits.
 - [ ] This is a full-stack application. Frontend and backend are required. 
 - [ ] Integrate user authentication (sign up and sign in) with database system.
 - [ ] You may use any languages, tools, or libraries you prefer when designing and building this app. 
-- [ ] Utilize the provided Dinosaur's API to display data.
-- [ ] Consume a second API that's related to Dinosaur (News API).
+- [ ] Integrate the OpenAI API to build the virtual teammate.
 - [ ] You may **_NOT_** use AI-base solution generators like GitHub CoPilot.
 - [ ] Useful links and resources:
-    - [National History Museum](https://www.nhm.ac.uk/discover/dinosaurs.html)
-    - [Dinosaurs API](https://chinguapi.onrender.com/dinosaurs)
-    - [NewsAPI](https://newsapi.org/)
+    - [OpenAI API](https://openai.com/blog/openai-api)
+    - [Fire Poker] (https://firepoker.app/#/)
+    - [Asana] (https://asana.com/resources/story-points)
 
 #### Styling
 
@@ -95,77 +72,82 @@ implement to enhance this app, if time permits.
 #### Functionality
 
 -   Overview:
-    - [ ] A full-stack application to provide users with an immersive experience in exploring dinosaurs through a user-friendly interface.
+    - [ ] A full-stack application designed to facilitate Scrum poker sessions with a user-friendly interface.
 
-- Dinosaur Display
-    - [ ] Display dinosaurs' name, weight, length, country, diet and corresponding images sourced from the provided API data.
-    - [ ] Each dinosaur entry should be clickable to view full details.
-    - [ ] Display a random fact about Dinosaur to the user upon every login.
+-   Creating a Poker Session
+    - [ ] Upon successful login, the app prompts the user to enter session details, including the session name, task details and voting scale.
+    - [ ] The app supports various voting scales such as Fibonacci Sequence, T-shirt Sizes, Power of Two Sequence, Linear Scale, etc.
+    - [ ] Once session details are selected, the app generates a unique session key.
+    - [ ] The user who creates the session shares the session key with their teammates.
 
-- Search Component
-    - [ ] Implement a search feature allowing users to search for dinosaurs by name, weight, length, country and diet.
-    - [ ] Search results should dynamically filter and sort dinosaurs based on the entered data (name, weight, length, country, diet).
+-   Joining a Session
+    - [ ] When a user receives a session ID or a join link, they should be able to input this information into the app to join the session.
+    - [ ] The app should verify the session ID and allow the user to join the corresponding session if it is valid.
+    - [ ] Once joined, the user should have access to the session's tasks and be able to participate in the estimation process.
 
-- Diet Chart Visualization
-    - [ ] Display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diet and type data.
-    - [ ] Ensure the chart is visually appealing and informative, providing a clear overview of diet composition.
+-   Task Estimation Process
+    - [ ] During a session, the app should present a task description to the participants.
+    - [ ] Participants should be able to input their estimates for the task using the voting interface provided by the app.
+    - [ ] The app should aggregate the votes from all participants and calculate the consensus estimate for the task.
 
-- Dinosaur Location Map
-    - [ ] Display the location of a selected dinosaur on a map.
-    - [ ] Upon clicking a dinosaur entry, dynamically fetch and display its geographic location on an interactive map using a mapping API (e.g., Google Maps).
+-   Session Management
+    - [ ] After the session ends, the app should display the final estimation results for each task to all participants.
 
-- Dinosaur Details View
-    - [ ] Enable users to view full details of a selected dinosaur upon clicking its entry.
-    - [ ] Details should include additional information sourced from the API data such as: 
-        - name
-        - imageSrc
-        - typeOfDinosaur
-        - length
-        - diet
-        - whenLived
-        - typeSpecies
-        - description
-        - foundIn 
-        - taxonomy
-        - namedBy
+-   Making a virtual teammate
+    - [ ] Develop a backend prompt carefully crafted to set up the app context. Example prompts:
+    - "Provide suggestions for estimating the complexity of the following task [task description]. Specify the [voting scale] to be used for estimating this task, along with a brief explanation for your choice."
+    - "Estimate how difficult this [task description] is using the [voting scale] and explain why."
+    - [ ] Upon submission of the task description and voting scale, send a request to the backend server, passing the input text to the endpoint responsible for interacting with the OpenAI API.
+    - [ ] Receive and process the response from the OpenAI API, which may include suggested estimates, explanations for each vote, or insights based on the input text.
+    - [ ] Display the OpenAI API suggested estimates with explanations alongside other participants' votes in the app interface. 
 
-- Dinosaur news and discoveries
-    - [ ] Consume a second API that's related to dinosaur (News API).
-    - [ ] Display news about recent dinosaur discoveries.
-
-- Responsiveness
+-   Responsiveness
     - [ ] Ensure the web application is responsive and accessible across various devices and screen sizes.
     - [ ] Utilize responsive design techniques to adapt to different viewport sizes.
     
 ### Extras (Not Required)
-- User profile page
-    - [ ] Track user search history.
+- Number of tasks
+    - [ ] The app should have more than one task at the same time.
+
+- Session management
+    - [ ] The session creator should have the ability to start, pause, resume, and end the session as needed.
+    - [ ] The app should notify participants about the session status changes (e.g., session started, paused, resumed, ended).
+
+-   User Interaction with Suggestions
+    - [ ] Provide options for users to accept, reject, or modify the suggested estimates based on their judgment and expertise.
 
 ## Acceptance Criteria
 - User authentication
     - [ ] Users should be able to sign up and sign in.
      
-- Search Functionality
-    - [ ] Users should be able to search for dinosaurs by name, weight, length, country and diet.
-    - [ ] Search results must dynamically filter displayed dinosaurs based on the entered name, weight, length, country and diet.
-    - [ ] Search functionality should be case-insensitive and allow partial matching of dinosaur names.
+- Creating a Poker session
+    - [ ] Users should be able to create a poker session entering the required details.
+        - Session name. 
+        - Task desctiprion. 
+        - Voting scale.
+    - [ ] After entering the session details, user should be able to see session key on the screen.
 
-- Diet Chart Visualization
-    - [ ] The app must display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diets (e.g., herbivore, carnivore, omnivore) and type based on provided data.
-    - [ ] The charts must accurately represent the proportion of each diet type within the dataset.
-    - [ ] Users should be able to easily interpret and interact with the chart to understand diet composition.
+- Joining a Poker Session
+    - [ ] Users should be able to join a session by entering the session key.
+    - [ ] Upon joining the session, users should have access to:
+        - The session name.
+        - Task descriptions.
+        - List of joined users.
+        - Voting scale options.
 
-- Dinosaur Details View
-    - [ ] Upon clicking a dinosaur entry, users must be able to view full details of the selected dinosaur.
-    - [ ] Dinosaur details should include notable characteristics sourced from the API data.
-    - [ ] The details view should be accessible and provide comprehensive information about the selected dinosaur.
+- Task Estimation Process
+    - [ ] Users should be able to vote for a certain task without seeing others' votes.
+    - [ ] Users should be able to submit their chosen vote by clicking on it.
+    - [ ] During the estimation process, the app should utilize the OpenAI API to participate in finalizing results.
 
-- [ ] Dinosaur news and discovery
-    - [ ] Users should be able to find and read the latest news and discoveries about dinosaurs.
+- Session Management
+    - [ ] Once the session ends, users should be able to view:
+        - The votes of other participants, including OpenAI API voting and suggestions.
+        - The final estimation results for each task.
 
 ## Acknowledgements
 
-We acknowledge the [National History Museum](https://www.nhm.ac.uk) for providing access to the dataset containing valuable information about dinosaurs. Additionally, we thank [NewsAPI](https://www.newsapi.org) for delivering the latest news on dinosaur discoveries, contributing to our ongoing exploration of this fascinating field.
+We acknowledge the [OpenAI API](https://openai.com/) for providing three months of free access to their powerful tools and resources, which will greatly enhance the functionality and capabilities of our applications.
 
 ## About Chingu
 
