@@ -12,13 +12,11 @@
 
 Hey Chingus, it's poker time!
 
-In this voyage, we'll be developing a Scrum Poker app, the go-to agile estimation technique for development teams. 
+In this voyage, you'll be developing a Scrum Poker app, the go-to agile estimation technique for development teams. 
 
-JJust like playing poker with friends, but with a twist – it's all about your tasks! Through this app, you'll not only enjoy the process but also become proficient in the Scrum methodology, gaining valuable insights into your skills and those of your teammates.
+Just like playing poker with friends, but with a twist – it's all about your tasks! Through this app, you'll not only enjoy the process but also become proficient in the Scrum methodology, gaining valuable insights into your skills and those of your teammates.
 
-But wait, there's more excitement to come! For the first time in Chingu, we're integrating the OpenAI API. This means we'll have a virtual teammate joining us in the estimation process, offering valuable insights for each task.
-
-The app will facilitate sessions where all teammates can join in to participate. Get ready for a productive and enjoyable journey ahead!
+But wait, there's more excitement to come! For the first time in Chingu, you'll be integrating the OpenAI API. This means you'll have a virtual teammate joining you in the estimation process, offering valuable insights for each task. How cool is that?
 
 Let's deal the cards and get started!
 
@@ -59,8 +57,8 @@ implement to enhance this app, if time permits.
 - [ ] You may **_NOT_** use AI-base solution generators like GitHub CoPilot.
 - [ ] Useful links and resources:
     - [OpenAI API](https://openai.com/blog/openai-api)
-    - [Fire Poker] (https://firepoker.app/#/)
-    - [Asana] (https://asana.com/resources/story-points)
+    - [FirePoker app](https://firepoker.app/#/)
+    - [Story points](https://asana.com/resources/story-points)
 
 #### Styling
 
@@ -74,8 +72,12 @@ implement to enhance this app, if time permits.
 -   Overview:
     - [ ] A full-stack application designed to facilitate Scrum poker sessions with a user-friendly interface.
 
+-   User Authentication:
+    - [ ] The application must include user authentication functionalities, allowing users to log in and log out securely.
+    - [ ] User login and logout forms should be processed through the database to ensure data integrity and security.
+
 -   Creating a Poker Session
-    - [ ] Upon successful login, the app prompts the user to enter session details, including the session name, task details and voting scale.
+    - [ ] Upon successful login, the app prompts the user to enter session details, including the session name, task description and voting scale.
     - [ ] The app supports various voting scales such as Fibonacci Sequence, T-shirt Sizes, Power of Two Sequence, Linear Scale, etc.
     - [ ] Once session details are selected, the app generates a unique session key.
     - [ ] The user who creates the session shares the session key with their teammates.
@@ -106,10 +108,12 @@ implement to enhance this app, if time permits.
     - [ ] Utilize responsive design techniques to adapt to different viewport sizes.
     
 ### Extras (Not Required)
-- Number of tasks
+
+-   Number of tasks
     - [ ] The app should have more than one task at the same time.
 
-- Session management
+-   Session management
+    - [ ] Integrate timer
     - [ ] The session creator should have the ability to start, pause, resume, and end the session as needed.
     - [ ] The app should notify participants about the session status changes (e.g., session started, paused, resumed, ended).
 
@@ -117,17 +121,18 @@ implement to enhance this app, if time permits.
     - [ ] Provide options for users to accept, reject, or modify the suggested estimates based on their judgment and expertise.
 
 ## Acceptance Criteria
-- User authentication
+
+-   User authentication
     - [ ] Users should be able to sign up and sign in.
      
-- Creating a Poker session
+-   Creating a Poker session
     - [ ] Users should be able to create a poker session entering the required details.
         - Session name. 
         - Task desctiprion. 
         - Voting scale.
     - [ ] After entering the session details, user should be able to see session key on the screen.
 
-- Joining a Poker Session
+-   Joining a Poker Session
     - [ ] Users should be able to join a session by entering the session key.
     - [ ] Upon joining the session, users should have access to:
         - The session name.
@@ -135,15 +140,29 @@ implement to enhance this app, if time permits.
         - List of joined users.
         - Voting scale options.
 
-- Task Estimation Process
+-   Task Estimation Process
     - [ ] Users should be able to vote for a certain task without seeing others' votes.
     - [ ] Users should be able to submit their chosen vote by clicking on it.
     - [ ] During the estimation process, the app should utilize the OpenAI API to participate in finalizing results.
 
-- Session Management
+-   Session Management
     - [ ] Once the session ends, users should be able to view:
         - The votes of other participants, including OpenAI API voting and suggestions.
         - The final estimation results for each task.
+
+## How to Obtain OpenAI API Key
+
+-   Create an Account:
+    - [ ] Visit the OpenAI API website and create an account.
+
+-   Navigate to API Keys:
+    - [ ] Once logged in, go to the API keys section in the navigation menu.
+
+-   Generate a New Secret Key:
+    - [ ] Click on "Create New Secret Key" to generate your API key.
+
+-   Note for Existing Users:
+    - [ ] If you are logged in with a ChatGPT account, you won't have access to a free OpenAI API key. Free keys are available for new users and are valid for three months.
 
 ## Acknowledgements
 
