@@ -20,7 +20,7 @@ But wait, there's more excitement to come! For the first time in Chingu, you'll 
 
 Let's deal the cards and get started!
 
-- Planning poker example app
+- Scrum poker example [app](https://firepoker.app/#/)
 
 ![Planning Poker Example Website](./assets/firepoker.png)
 
@@ -78,7 +78,7 @@ implement to enhance this app, if time permits.
 
 -   Creating a Poker Session
     - [ ] Upon successful login, the app prompts the user to enter session details, including the session name, task description and voting scale.
-    - [ ] The app supports various voting scales such as Fibonacci Sequence, T-shirt Sizes, Power of Two Sequence, Linear Scale, etc.
+    - [ ] The app supports various [voting scales](https://asana.com/resources/story-points) such as Fibonacci Sequence, T-shirt Sizes, Power of Two Sequence, Linear Scale, etc.
     - [ ] Once session details are selected, the app generates a unique session key.
     - [ ] The user who creates the session shares the session key with their teammates.
 
@@ -123,7 +123,7 @@ implement to enhance this app, if time permits.
 ## Acceptance Criteria
 
 -   User authentication
-    - [ ] Users should be able to sign up and sign in.
+    - [ ] Users should be able to register, sign up and sign in.
      
 -   Creating a Poker session
     - [ ] Users should be able to create a poker session entering the required details.
