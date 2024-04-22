@@ -123,7 +123,7 @@ implement to enhance this app, if time permits.
 ## Acceptance Criteria
 
 -   User authentication
-    - [ ] Users should be able to register, sign up and sign in.
+    - [ ] Users should be able to sign up and sign in.
      
 -   Creating a Poker session
     - [ ] Users should be able to create a poker session entering the required details.
