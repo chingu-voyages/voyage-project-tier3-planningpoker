@@ -16,7 +16,7 @@ In this voyage, you'll be developing a Scrum Poker app, the go-to agile estimati
 
 Just like playing poker with friends, but with a twist – it's all about your tasks! Through this app, you'll not only enjoy the process but also become proficient in the Scrum methodology, gaining valuable insights into your skills and those of your teammates.
 
-But wait, there's more excitement to come! For the first time in Chingu, you'll be integrating the OpenAI API. This means you'll have a virtual teammate joining you in the estimation process, offering valuable insights for each task. How cool is that?
+But wait, there's more excitement to come! For the first time in Chingu, you'll be integrating the OpenAI. This means you'll have a virtual teammate joining you in the estimation process, offering valuable insights for each task. How cool is that?
 
 Let's deal the cards and get started!
 
@@ -53,10 +53,10 @@ implement to enhance this app, if time permits.
 - [ ] This is a full-stack application. Frontend and backend are required. 
 - [ ] Integrate user authentication (sign up and sign in) with database system.
 - [ ] You may use any languages, tools, or libraries you prefer when designing and building this app. 
-- [ ] Integrate the OpenAI API to build the virtual teammate.
+- [ ] Integrate the GroqAI API to build the virtual teammate.
 - [ ] You may **_NOT_** use AI-base solution generators like GitHub CoPilot.
 - [ ] Useful links and resources:
-    - [OpenAI API](https://openai.com/blog/openai-api)
+    - [GroqAI API](https://console.groq.com/docs/quickstart)
     - [FirePoker app](https://firepoker.app/#/)
     - [Story points](https://asana.com/resources/story-points)
 
@@ -100,8 +100,8 @@ implement to enhance this app, if time permits.
     - "Provide suggestions for estimating the complexity of the following task [task description]. Specify the [voting scale] to be used for estimating this task, along with a brief explanation for your choice."
     - "Estimate how difficult this [task description] is using the [voting scale] and explain why."
     - [ ] Upon submission of the task description and voting scale, send a request to the backend server, passing the input text to the endpoint responsible for interacting with the OpenAI API.
-    - [ ] Receive and process the response from the OpenAI API, which may include suggested estimates, explanations for each vote, or insights based on the input text.
-    - [ ] Display the OpenAI API suggested estimates with explanations alongside other participants' votes in the app interface. 
+    - [ ] Receive and process the response from the GroqAI API, which may include suggested estimates, explanations for each vote, or insights based on the input text.
+    - [ ] Display the GroqAI API suggested estimates with explanations alongside other participants' votes in the app interface. 
 
 -   Responsiveness
     - [ ] Ensure the web application is responsive and accessible across various devices and screen sizes.
@@ -143,30 +143,27 @@ implement to enhance this app, if time permits.
 -   Task Estimation Process
     - [ ] Users should be able to vote for a certain task without seeing others' votes.
     - [ ] Users should be able to submit their chosen vote by clicking on it.
-    - [ ] During the estimation process, the app should utilize the OpenAI API to participate in finalizing results.
+    - [ ] During the estimation process, the app should utilize the GroqAI API to participate in finalizing results.
 
 -   Session Management
     - [ ] Once the session ends, users should be able to view:
-        - The votes of other participants, including OpenAI API voting and suggestions.
+        - The votes of other participants, including GroqAI API voting and suggestions.
         - The final estimation results for each task.
 
-## How to Obtain OpenAI API Key
+## How to Obtain GroqAI API Key
 
 -   Create an Account:
-    - [ ] Visit the OpenAI API website and create an account.
+    - [ ] Visit the [GroqCloud](https://console.groq.com) website and create an account.
 
 -   Navigate to API Keys:
     - [ ] Once logged in, go to the API keys section in the navigation menu.
 
--   Generate a New Secret Key:
-    - [ ] Click on "Create New Secret Key" to generate your API key.
-
--   Note for Existing Users:
-    - [ ] If you are logged in with a ChatGPT account, you won't have access to a free OpenAI API key. Free keys are available for new users and are valid for three months.
+-   Generate a New API Key:
+    - [ ] Click on "Create API Key" to generate your API key.
 
 ## Acknowledgements
 
-We acknowledge the [OpenAI API](https://openai.com/) for providing three months of free access to their powerful tools and resources, which will greatly enhance the functionality and capabilities of our applications.
+We acknowledge the [GroqCloud Team](https://console.groq.com) for providing free access to their powerful tools and resources, which will greatly enhance the functionality and capabilities of our applications.
 
 ## About Chingu
 
